@@ -13,7 +13,7 @@ class ProjectSeeder extends Seeder
             ['slug' => 'website-portofolio'],
             [
                 'title' => 'Website Portofolio',
-                'description' => 'Website portofolio responsif dengan fitur showcase project, ERD, flowchart, dan contact message.',
+                'description' => 'Saya Mahasiswa angkatan 24 dari fakultas Ilmu Komputer Prodi Teknik Informatika yang sedang mendalami Full Stack Enginer',
                 'image' => 'images/Adit.JPG',
                 'erd_image' => 'images/ERD.png',
                 'flowchart_image' => 'images/FlowChart.png',

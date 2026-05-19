@@ -53,10 +53,10 @@
         </div>
 
         <div class="hero-content">
-            <div class="hero-subtitle">Full Stack Beginner</div>
-            <h1>Transforming Ideas Into Beautiful Comedy</h1>
+            <div class="hero-subtitle">Mahasiswa Esa Unggul</div>
+            <h1>Muhammad Aditya Teknik Informatika</h1>
             <p class="subtitle">
-                I craft digital experiences that captivate, engage, and inspire through thoughtful design and innovative solutions
+                Saya Mahasiswa angkatan 24 dari fakultas Ilmu Komputer Prodi Teknik Informatika yang sedang mendalami Full Stack Enginer
             </p>
             <a href="#portfolio" class="cta-button">Explore My Work</a>
         </div>
@@ -73,15 +73,15 @@
                 <div class="about-image slide-in-left"><img src="{{ asset('images/Adit.JPG') }}" alt="Adit"></div>
 
                 <div class="about-text slide-in-right">
-                    <h3>Passionate about creating meaningful digital experiences</h3>
+                    <h3>Data Diri Muhammad Aditya</h3>
                     <p>
-                        With over 5 years of experience in digital design, I specialize in creating user-centered solutions that bridge the gap between functionality and aesthetics. My approach combines strategic thinking with creative execution to deliver impactful results.
+                        Saya Mahasiswa angkatan 24 dari fakultas Ilmu Komputer Prodi Teknik Informatika yang sedang mendalami Full Stack Enginer
                     </p>
                     <p>
-                        I believe that great design is not just about how it looks, but how it works and how it makes people feel. Every project is an opportunity to solve problems and create connections that matter.
+                        Jujur bingung mau ngisi apa tapi sekarang sedang berusaha untuk memahami lebih dalam tentang codingan maupun lain lain.
                     </p>
                     <p>
-                        When I'm not designing, you'll find me exploring new technologies, sketching ideas, or seeking inspiration in nature and architecture.
+                        Semoga bisa menjadi lebih baik lagi
                     </p>
 
                     <div class="skills">
