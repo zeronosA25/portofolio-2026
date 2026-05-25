@@ -16,7 +16,9 @@
     <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-container">
-            <div class="logo">Personal Shape</div>
+            <div class="logo">
+            {{ $siteProfile?->site_name ?? 'Portofolio' }}
+            </div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -53,13 +55,21 @@
         </div>
 
         <div class="hero-content">
-            <div class="hero-subtitle">Mahasiswa Esa Unggul</div>
-            <h1>Muhammad Aditya Teknik Informatika</h1>
-            <p class="subtitle">
-                Saya Mahasiswa angkatan 24 dari fakultas Ilmu Komputer Prodi Teknik Informatika yang sedang mendalami Full Stack Enginer
-            </p>
-            <a href="#portfolio" class="cta-button">Explore My Work</a>
+            <div class="hero-subtitle">
+            {{ $siteProfile?->hero_subtitle ?? 'Mahasiswa Esa Unggul' }}
         </div>
+
+        <h1>
+            {{ $siteProfile?->hero_title ?? 'Muhammad Aditya Teknik Informatika' }}
+        </h1>
+
+        <p class="subtitle">
+            {{ $siteProfile?->hero_description ?? 'Saya Mahasiswa angkatan 24 dari Fakultas Ilmu Komputer Prodi Teknik Informatika yang sedang mendalami Full Stack Engineer.' }}
+        </p>
+
+        <a href="#portfolio" class="cta-button">
+            {{ $siteProfile?->hero_button_text ?? 'Lihat Tugas' }}
+        </a>
 
         <div class="scroll-indicator" onclick="document.getElementById('about').scrollIntoView()"></div>
     </section>
@@ -67,30 +77,41 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title fade-in">About Me</h2>
+            <h2 class="section-title fade-in">
+                {{ $siteProfile?->about_title ?? 'Tentang Saya' }}
+            </h2>
 
             <div class="about-content">
-                <div class="about-image slide-in-left"><img src="{{ asset('images/Adit.JPG') }}" alt="Adit"></div>
+                <div class="about-image slide-in-left">
+                    @if ($siteProfile?->about_image)
+                        <img src="{{ asset('storage/' . $siteProfile->about_image) }}" alt="{{ $siteProfile->site_name }}">
+                    @else
+                        <img src="{{ asset('images') }}" alt="Adit">
+                    @endif
+                </div>
 
                 <div class="about-text slide-in-right">
-                    <h3>Data Diri Muhammad Aditya</h3>
+                    <h3>
+                        {{ $siteProfile?->about_heading ?? 'Data Diri Muhammad Aditya' }}
+                    </h3>
+
                     <p>
-                        Saya Mahasiswa angkatan 24 dari fakultas Ilmu Komputer Prodi Teknik Informatika yang sedang mendalami Full Stack Enginer
+                        {{ $siteProfile?->about_description_1 ?? 'Saya Mahasiswa angkatan 24 dari Fakultas Ilmu Komputer Prodi Teknik Informatika yang sedang mendalami Full Stack Engineer.' }}
                     </p>
+
                     <p>
-                        Jujur bingung mau ngisi apa tapi sekarang sedang berusaha untuk memahami lebih dalam tentang codingan maupun lain lain.
+                        {{ $siteProfile?->about_description_2 ?? 'Saat ini saya sedang berusaha memahami lebih dalam tentang pengembangan website, backend, frontend, dan database.' }}
                     </p>
+
                     <p>
-                        Semoga bisa menjadi lebih baik lagi
+                        {{ $siteProfile?->about_description_3 ?? 'Semoga bisa terus berkembang dan menjadi developer yang lebih baik lagi.' }}
                     </p>
 
                     <div class="skills">
-                        <span class="skill-tag">UI/UX Design</span>
-                        <span class="skill-tag">Web Development</span>
-                        <span class="skill-tag">Brand Identity</span>
-                        <span class="skill-tag">Motion Graphics</span>
-                        <span class="skill-tag">Prototyping</span>
-                        <span class="skill-tag">Design Systems</span>
+                        @foreach (($siteProfile?->skills ?? []) as $skill)
+                            <span class="skill-tag">{{ $skill }}</span>
+                        @endforeach
+                    </div>
                     </div>
                 </div>
             </div>

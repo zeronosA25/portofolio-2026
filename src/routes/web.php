@@ -2,6 +2,7 @@
 use App\Models\Project;
 use Illuminate\Support\Facades\Route;
 use Livewire\Livewire;
+use App\Models\SiteProfile;
 use Illuminate\Support\Facades\Response;
 
 /* NOTE: Do Not Remove
@@ -18,15 +19,21 @@ Livewire::setScriptRoute(function ($handle) {
 /*
 / END
 */
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::get('/', function () {
     return view('welcome', [
+        'siteProfile' => SiteProfile::first(),
         'projects' => Project::query()
             ->where('is_published', true)
             ->latest()
             ->get(),
     ]);
 });
+// Route::get('/', function () {
+//     return view('welcome', [
+//         'projects' => Project::query()
+//             ->where('is_published', true)
+//             ->latest()
+//             ->get(),
+//     ]);
+// });
