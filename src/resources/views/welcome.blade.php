@@ -221,10 +221,9 @@
 
         <div class="container">
             <div class="contact-content">
-                <h2 class="section-title fade-in">Let's Work Together</h2>
+                <h2 class="section-title fade-in">Kontak kami</h2>
                 <p class="fade-in">
-                    Ready to bring your vision to life? Let's discuss how we can create something amazing together.
-                    I'm always excited to take on new challenges and collaborate on innovative projects.
+                    Jika ingin mengumpulkan portofolio mu silahkan isi
                 </p>
 
                 @livewire('contact-form')
